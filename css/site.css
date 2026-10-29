@@ -939,3 +939,17 @@ html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-ad
 .subprog h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--on-light); }
 .subprog p { margin: 0; }
 .subprog .tag { color: var(--gold-deep); }
+
+/* two programme cards, side by side (Johnson's layout) */
+.progs { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); margin-top: 36px; align-items: stretch; }
+@media (min-width: 900px) { .progs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; } }
+.prog { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 34px 30px; border: 1px solid var(--rule-light); border-radius: 26px; background: #fff; box-shadow: 0 26px 56px -38px rgba(20,19,15,.45); scroll-margin-top: 96px; }
+.prog > p { margin: 0; }
+.prog .tag { color: var(--gold-deep); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+.prog__sub { color: var(--on-light-muted); padding-bottom: 14px; border-bottom: 1px solid var(--rule-light); width: 100%; }
+.prog h3 { margin: 6px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(1.9rem, 3.6vw, 2.5rem); color: var(--on-light); line-height: 1.05; }
+.prog .program__hook { color: var(--gold-deep); }
+.prog .btn { margin-top: auto; white-space: normal; text-align: center; max-width: 100%; }
+.prog .fine { color: var(--on-light-muted); }
+.prog .ready { margin-top: auto; width: 100%; background: var(--paper-2); box-shadow: none; padding: 24px 22px; }
+.prog .ready h3 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin: 0; }
