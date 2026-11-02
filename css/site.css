@@ -953,3 +953,46 @@ html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-ad
 .prog .fine { color: var(--on-light-muted); }
 .prog .ready { margin-top: auto; width: 100%; background: var(--paper-2); box-shadow: none; padding: 24px 22px; }
 .prog .ready h3 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin: 0; }
+
+/* What happens next: three numbered steps + "You will leave with" (design from Johnson's HTML) */
+.next .rule-gold { width: 80px; height: 2px; background: var(--gold-deep); margin: 22px 0 34px; }
+.hsteps { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
+.hsteps li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 18px; align-items: start; }
+.hn { width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--gold-deep); display: grid; place-items: center; font-family: var(--display); font-size: 1.35rem; color: var(--gold-deep); background: #fff; box-shadow: 0 0 0 6px rgba(124,94,14,.10); }
+.hsteps h3 { margin: 0; padding-top: 6px; font-family: var(--display); font-weight: 400; font-size: clamp(1.35rem, 2.6vw, 1.6rem); line-height: 1.25; color: var(--on-light); }
+@media (min-width: 860px) {
+  .hsteps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+  .hsteps li { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+.leave-box { margin-top: 46px; padding: 24px clamp(20px, 3vw, 32px); border: 1px solid var(--rule-light); border-left: 3px solid var(--gold-deep); border-radius: 14px; background: #fff; }
+.leave-box p { margin: 0 0 12px; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: var(--gold-deep); }
+.leave-box ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.leave-box li { position: relative; padding-left: 22px; font-family: var(--display); font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.35; color: var(--on-light); }
+.leave-box li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold-deep); }
+.next h2 { margin-bottom: 44px; }
+
+/* ---- reference layout: hero kicker + quote, first step, meet role ---- */
+.hero__kick { margin: 18px 0 0; color: var(--gold-hi); font-weight: 500; font-size: 1rem; }
+.hero__sub { margin: 6px 0 0; color: var(--on-dark); max-width: 46ch; }
+.hero__quote { margin: 28px 0 0; padding: 4px 0 4px 18px; border-left: 2px solid var(--gold); max-width: 460px; }
+.hero__quote blockquote { margin: 0; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.45; color: var(--on-dark); }
+.hero__quote figcaption { margin-top: 10px; font-size: .9rem; color: var(--on-dark-muted); }
+.hero__quote figcaption b { color: var(--gold-hi); font-weight: 500; }
+.first h2 { max-width: 14ch; }
+.first .paths { margin-top: 40px; }
+.first__note { margin-top: 18px; color: var(--on-light-muted); max-width: 52ch; }
+.first__note a { color: var(--gold-deep); }
+.panel-split__body .role { margin: 0; color: var(--gold-hi); font-weight: 500; }
+
+/* ALL buttons: one gold style (Johnson's request) */
+.btn, .btn--line, .btn--ink, .band--paper .btn--line, .band--paper2 .btn--line, .band--gold .btn--line, .band--gold .btn--ink {
+  background: var(--gold-metal); background-size: 140% 140%; background-position: 0% 0%;
+  color: var(--ink); border: 1px solid transparent;
+  box-shadow: 0 10px 30px -12px rgba(212, 175, 55, 0.55);
+}
+.btn:hover, .btn--line:hover, .btn--ink:hover, .band--paper .btn--line:hover, .band--paper2 .btn--line:hover, .band--gold .btn--line:hover, .band--gold .btn--ink:hover {
+  background: var(--gold-metal); background-size: 140% 140%; background-position: 100% 100%; color: var(--ink);
+  box-shadow: 0 14px 34px -10px rgba(212, 175, 55, 0.75);
+}
+/* on the gold closing band the gold buttons get a dark edge so they stay visible */
+.band--gold .btn { border: 2px solid var(--ink); box-shadow: 0 12px 26px -14px rgba(10, 10, 9, 0.7); }
