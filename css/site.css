@@ -996,3 +996,13 @@ html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-ad
 }
 /* on the gold closing band the gold buttons get a dark edge so they stay visible */
 .band--gold .btn { border: 2px solid var(--ink); box-shadow: 0 12px 26px -14px rgba(10, 10, 9, 0.7); }
+
+/* hero: the gold tagline sits directly on top of the "Not sure..." statement as one block */
+.hero__kick { margin: 22px 0 0; padding: 0; line-height: 1.4; }
+.hero__sub { margin: 4px 0 0; line-height: 1.55; }
+.hero__kick + .hero__sub { margin-top: 4px; }
+.hero__text .hero__kick { margin: 20px 0 0 !important; padding: 0 !important; }
+.hero__text .hero__sub { margin: 2px 0 0 !important; padding: 0 !important; }
+.hero__statement { display: grid; gap: 6px; }
+.hero__text .hero__statement .hero__kick { margin: 0 !important; }
+.hero__text .hero__statement .hero__sub { margin: 0 !important; }
